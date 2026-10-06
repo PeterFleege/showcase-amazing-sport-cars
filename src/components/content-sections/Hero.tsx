@@ -44,7 +44,7 @@ export default function Hero({ cars }: { cars: Car[] }) {
   return (
     <section
       id="top"
-      className="film-grain relative h-[100svh] min-h-[640px] w-full overflow-hidden bg-ink"
+      className="film-grain relative h-svh min-h-160 w-full overflow-hidden bg-ink"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
@@ -77,11 +77,11 @@ export default function Hero({ cars }: { cars: Car[] }) {
       </AnimatePresence>
 
       {/* Readability overlays */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-ink via-ink/20 to-ink/70" />
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/30 to-transparent" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-ink via-ink/20 to-ink/70" />
+      <div className="pointer-events-none absolute inset-0 bg-linear-to-r from-ink/90 via-ink/30 to-transparent" />
 
       {/* Copy */}
-      <div className="relative z-10 mx-auto flex h-full max-w-[1500px] flex-col justify-end px-6 pb-28 lg:px-12 lg:pb-32">
+      <div className="relative z-10 mx-auto flex h-full max-w-375 flex-col justify-end px-6 pb-28 lg:px-12 lg:pb-32">
         <AnimatePresence mode="wait">
           <motion.div
             key={car.slug}
@@ -122,7 +122,7 @@ export default function Hero({ cars }: { cars: Car[] }) {
 
       {/* Slider controls */}
       <div className="absolute inset-x-0 bottom-0 z-20">
-        <div className="mx-auto flex max-w-[1500px] items-center gap-6 px-6 pb-8 lg:px-12">
+        <div className="mx-auto flex max-w-375 items-center gap-6 px-6 pb-8 lg:px-12">
           <span className="font-display text-xl tabular-nums text-gold-400">
             {String(index + 1).padStart(2, "0")}
           </span>
@@ -139,7 +139,7 @@ export default function Hero({ cars }: { cars: Car[] }) {
                 aria-selected={i === index}
                 aria-label={`Show ${c.name}`}
                 onClick={() => setIndex(i)}
-                className="group relative h-6 flex-1 max-w-[140px]"
+                className="group relative h-6 flex-1 max-w-35"
               >
                 <span className="absolute inset-x-0 top-1/2 h-px bg-bone/25" />
                 {i === index && (
