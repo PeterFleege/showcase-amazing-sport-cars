@@ -34,9 +34,87 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+::selection {
+  background: #d4a24c;
+  color: #070707;
+}
+
+/* Slim gold scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #070707;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#8a5f1c, #d4a24c);
+  border: 2px solid #070707;
+  border-radius: 999px;
+}
+
+/* Reusable luxury utilities */
+.text-gold-gradient {
+  background: linear-gradient(
+    100deg,
+    #b8832b 0%,
+    #f1d596 45%,
+    #d4a24c 70%,
+    #8a5f1c 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hairline {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(212, 162, 76, 0.55),
+    transparent
+  );
+  height: 1px;
+}
+
+/* @keyframes kenburns {
+  from {
+    transform: scale(1.02) translate3d(0, 0, 0);
+  }
+  to {
+    transform: scale(1.14) translate3d(-1.2%, -1%, 0);
+  }
+}
+.animate-kenburns {
+  animation: kenburns 9s ease-out forwards;
+} */
+
+@keyframes scroll-cue {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+.animate-scroll-cue {
+  animation: scroll-cue 2.2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+  }
+}
+
+/* Accessibility safeguard for systems (e.g. iOS, Android) with "Reduced motion" turned on */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-kenburns,
+  .animate-marquee,
+  .animate-scroll-cue {
+    animation: none;
   }
 }
