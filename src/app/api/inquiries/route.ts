@@ -1,6 +1,6 @@
 // src/app/api/inquiries/route.ts
 
-import { saveInquiry } from "@/db/db";
+import { saveInquiry } from "@/lib/queries/inquiry";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

@@ -9,6 +9,7 @@ import Heritage from "@/components/content-sections/Heritage";
 import Gallery from "@/components/content-sections/Gallery";
 import Intro from "@/components/content-sections/Intro";
 import Contact from "@/components/content-sections/Contact";
+import Footer from "@/components/content-sections/Footer";
 import { getFeaturedCars } from "@/lib/queries/cars";
 
 export default async function Home() {
@@ -24,6 +25,7 @@ export default async function Home() {
       <Heritage />
       <Gallery cars={cars} />
       <Contact cars={cars} />
+      <Footer />
     </>
   );
 }
