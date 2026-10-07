@@ -8,6 +8,7 @@ import Performance from "@/components/content-sections/Performance";
 import Heritage from "@/components/content-sections/Heritage";
 import Gallery from "@/components/content-sections/Gallery";
 import Intro from "@/components/content-sections/Intro";
+import Contact from "@/components/content-sections/Contact";
 import { getFeaturedCars } from "@/lib/queries/cars";
 
 export default async function Home() {
@@ -22,6 +23,7 @@ export default async function Home() {
       <Performance cars={cars} />
       <Heritage />
       <Gallery cars={cars} />
+      <Contact cars={cars} />
     </>
   );
 }
