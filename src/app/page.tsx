@@ -7,6 +7,7 @@ import Experience from "@/components/content-sections/Experience";
 import Performance from "@/components/content-sections/Performance";
 import Heritage from "@/components/content-sections/Heritage";
 import Gallery from "@/components/content-sections/Gallery";
+import Intro from "@/components/content-sections/Intro";
 import { getFeaturedCars } from "@/lib/queries/cars";
 
 export default async function Home() {
@@ -15,6 +16,7 @@ export default async function Home() {
     <>
       <Navbar />
       <Hero cars={cars} />
+      <Intro />
       <Collection cars={cars} />
       <Experience car={cars[0]} />
       <Performance cars={cars} />
