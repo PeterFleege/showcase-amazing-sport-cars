@@ -1,7 +1,12 @@
 # Amazing Sports Cars
 
-A dark, gold-accented luxury landing page for a fictional super car brand.
+![](./public/amazing-sports-cars.png)
+
 Next.js (App Router) · TypeScript · Tailwind CSS v4 · Framer Motion · PostgreSQL.
+
+## About
+
+A dark, gold-accented luxury landing page for a fictional super car brand.
 
 ## Getting started
 
